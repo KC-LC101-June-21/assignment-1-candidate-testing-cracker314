@@ -45,13 +45,13 @@ function gradeQuiz(candidateAnswers) {
   let grade = 0;
   for (let i = 0; i < questions.length; i++) {
     if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
-      grade += 1;
+      grade += 20;
     }
   }
-  console.log(`>>> Overall Grade: ${grade * 20}% (${grade} of 5 responses correct) <<<`);
+  console.log(`>>> Overall Grade: ${grade}% (${grade/20} of 5 responses correct) <<<`);
   
   let status;
-  if (grade < 4) {
+  if (grade < 80) {
     status = 'FAILED';
   } else {
     status = 'PASSED';
